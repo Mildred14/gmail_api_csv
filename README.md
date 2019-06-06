@@ -32,7 +32,7 @@ ruby nameofyourfile.rb
 
 The first time you run the project, it going to prompt you to authorize access:
 
-- Click on the link that gives you and this going to open a new window or tab in your browser. It this fails, don't worry about it just copy the URL on your browser
+- Click on the link that it gives you on the terminal and this going to open a new window or tab in your browser. If this fails, don't worry about it just copy the URL on your browser
 
 - Then Google will be prompted to log in in case you are not. If you are logged into differents Gmail accounts, Google will ask you to select one account to use for the authorization.
 
