@@ -15,7 +15,7 @@ After that open the file on your text editor and execute this on the terminal
 
 Then, go to the official page of [GMAIL API](https://developers.google.com/gmail/api/quickstart/ruby) to obtain your credentials.json
 
-Follow Step 1 to turn on the Gmail API and don't forget to download your client configuration (your file probably will be on the download's folder, please change it at the right folder)
+Follow Step 1 to turn on the Gmail API and don't forget to download your client configuration (your file probably will be on the download's folder, please change it at the project root folder )
 
 Step 2 you need to Install the Google Client Library. Verify that you are on the right path and add this line to your terminal to add the gem
 ```bash
