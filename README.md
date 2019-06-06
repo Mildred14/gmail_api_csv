@@ -13,7 +13,7 @@ Firts clone or download the repo with the [git commands](https://confluence.atla
 
 After that open the file on your text editor and execute this on the terminal
 
-Then, go to the official page of [GMAIL API](https://developers.google.com/gmail/api/quickstart/ruby) to obtein your credentials.json
+Then, go to the official page of [GMAIL API](https://developers.google.com/gmail/api/quickstart/ruby) to obtain your credentials.json
 
 Follow Step 1 to turn on the Gmail API and don't forget to download your client configuration (your file probably will be on the download's folder, please change it at the right folder)
 
@@ -34,7 +34,7 @@ The first time you run the project, it going to prompt you to authorize access:
 
 - Click on the link that gives you and this going to open a new window or tab in your browser. It this fails, don't worry about it just copy the URL on your browser
 
-- Then Google will be prompted to log in in case you are not. If you are logged into differents Gmail accounts, Google will aske you to select one account to use for the authorization.
+- Then Google will be prompted to log in in case you are not. If you are logged into differents Gmail accounts, Google will ask you to select one account to use for the authorization.
 
 - Click the Accept button.
 
