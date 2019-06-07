@@ -100,12 +100,13 @@ Thread.new do
 end
 
 sender_data = {}
-
+page = nil
 loop do
   emails = service.list_user_messages(
             'me',
             max_results: limit,
-            q: request_params
+            q: request_params,
+            page_token: page 
           )
 
   if set = emails.messages
@@ -119,8 +120,9 @@ loop do
   end
 
   limit =  limit - emails.messages.count  if limit
-  puts ''
-  break if !emails.next_page_token || ( !limit.nil? && limit == 0)
+  puts ""
+  page = emails.next_page_token
+  break if !page || ( !limit.nil? && limit == 0)
 end
 
 headers = [ 'Nombre', 'Email']
