@@ -1,6 +1,6 @@
 # Gmail_API_CSV
 
-With this Ruby applicaction you will be able to obtain a CSV format containing the relation of users that send you an email with an attachment. Keep in mind that this is Gmail users oriented. 
+With this Ruby applicaction you will be able to obtain a CSV format containing the relation of users that sent you an email. Keep in mind that this is Gmail users oriented. 
 
 ## Requirements
 
@@ -15,7 +15,7 @@ Then, in order to use the Gmail API you will need to create a project into your 
 
 Follow Step 1 to turn on the Gmail API and don't forget to download your client configuration (your file probably will be on the download's folder, please change it at the project root folder )
 
-Step 2 you need to Install the Google Client Library. Verify that you are on the right path and add this line to your terminal to add the gem
+Step 2 - You need to Install the Google Client Library. Verify that you are on the right path and add this line to your terminal to add the gem:
 ```bash
 gem install google-api-client
 ```
