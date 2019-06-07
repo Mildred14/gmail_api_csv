@@ -63,11 +63,11 @@ service = Google::Apis::GmailV1::GmailService.new
 service.client_options.application_name = APPLICATION_NAME
 service.authorization = authorize
 
-request_params = 'has:attachment'
 puts '--Todos los campos son opcionales--'
 print "\nIngresa una fecha inicial (YYYY/MM/DD): "
 start_date = gets
 
+request_params = ''
 if valid_date?(start_date)
   request_params+= ' after: ' + start_date
 else
@@ -77,7 +77,7 @@ end
 print 'Ingresa una fecha final (YYYY/MM/DD): '
 end_date = gets
 if valid_date?(end_date)
-  request_params+=' before: ' + end_date
+  request_params+= ' before: ' + end_date
 else
   puts 'Error en el parámetro, este sera ignorado' if end_date != "\n"
 end
@@ -104,7 +104,6 @@ emails = service.list_user_messages(
           max_results: limit,
           q: request_params
          )
-
 
 sender_data = {}
 
