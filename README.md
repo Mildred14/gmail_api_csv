@@ -38,7 +38,7 @@ The first time you run the project, it going to prompt you to authorize access:
 
 - Click the Accept button.
 
-- Copy the code on your terminal 
+- Finally, copy the code on your terminal 
 
 Now you may close the window/tab.
 
