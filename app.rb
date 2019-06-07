@@ -82,7 +82,7 @@ else
   puts 'Error en el parámetro, este sera ignorado' if end_date != "\n"
 end
 
-print 'Límite de correos(100 por defecto): '
+print 'Límite de correos: '
 aux = gets
 if valid_number?(aux)
   limit = aux.to_i if valid_number?(aux)
@@ -99,22 +99,28 @@ Thread.new do
   end
 end
 
-emails = service.list_user_messages(
-          'me',
-          max_results: limit,
-          q: request_params
-         )
-
 sender_data = {}
 
-if set = emails.messages
-  set.each do |message|
-    email = service.get_user_message('me', message.id)
-    email_sended = email.payload.headers.find {|header| header.name == "From" }.value
-    sender_email = email_sended[/#{'<'}(.*?)#{'>'}/m, 1]
-    sender_name = email_sended.split('<')[0]
-    sender_data[sender_email] = sender_name
+loop do
+  emails = service.list_user_messages(
+            'me',
+            max_results: limit,
+            q: request_params
+          )
+
+  if set = emails.messages
+    set.each do |message|
+      email = service.get_user_message('me', message.id)
+      email_sended = email.payload.headers.find {|header| header.name == "From" }.value
+      sender_email = email_sended[/#{'<'}(.*?)#{'>'}/m, 1]
+      sender_name = email_sended.split('<')[0]
+      sender_data[sender_email] = sender_name
+    end
   end
+
+  limit =  limit - emails.messages.count  if limit
+  puts ''
+  break if !emails.next_page_token || ( !limit.nil? && limit == 0)
 end
 
 headers = [ 'Nombre', 'Email']
