@@ -121,7 +121,6 @@ CSV.open("CVs_de_solicitantes.csv", "wb") do |csv|
   sender_data.each do |email, user_name|
     csv << [user_name, email]
   end
-  puts sender_data
 end
 
 @process =  false
